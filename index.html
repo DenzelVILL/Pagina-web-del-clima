@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLIMA API</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="titulo">
+    <p>
+      CLIMA
+    </p>
+  </div>
+ 
+
+  <!-- Formulario para consultar y eliminar tareas -->
+  <form id="weatherForm">
+    <!-- Campo de entrada para la ciudad -->
+    <input type="text" id="cityInput" placeholder="Ingrese la ciudad">
+    <!-- Botón para consultar el clima -->
+    <button type="button" onclick="consultarClima()">Consultar</button>
+    <!-- Botón para eliminar tareas -->
+    <button type="button" onclick="eliminarTarjetas()">Eliminar</button>
+  </form>
+
+  <!-- Contenedor principal para mostrar la información del clima -->
+  <div id="root" class="grid-container"></div>
+</body>
+
+
+</html>

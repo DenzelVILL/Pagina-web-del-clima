@@ -1,0 +1,138 @@
+/* ESTILO PARA EL CUERPO DE LA PÁGINA */
+body {
+  font-family: monospace; /* Establece la fuente de texto para todo el cuerpo de la página */
+  background-color: #1e1e1e; /* Establece el color de fondo del cuerpo de la página */
+  margin: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh; /* Establece la altura del cuerpo de la página al 100% del viewport height */
+}
+
+/* Contenedor principal para las tarjetas */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+  position: absolute;
+  top: 4cm; /* Posiciona el contenedor en la parte superior, a 4cm del borde superior */
+}
+
+/* Estilos para las tarjetas */
+.card {
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(26, 255, 0, 0.342);
+  overflow: hidden;
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border: 2px solid #00ff1e;
+  margin-bottom: 1px;
+  transition: all 0.5s ease-in-out; /* Agrega una transición para suavizar el cambio de tamaño */
+}
+
+/* Ajustes de tamaño para la primera tarjeta */
+.card:first-child {
+  transform: scale(0.9); /* Ajusta el tamaño de la primera tarjeta */
+}
+
+/* Ajustes de tamaño para las demás tarjetas */
+.card:not(:first-child) {
+  transform: scale(0.8); /* Ajusta el tamaño de las demás tarjetas */
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es demasiado largo */
+}
+
+/* Estilos para los títulos */
+h1 {
+  color: #22e439;
+  display: flex;
+  justify-content: center;
+}
+
+h2, h3 {
+  color: #23ac33;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.imagen {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Estilos para el formulario */
+form {
+  gap: 1rem;
+  position: absolute; /* Posiciona de forma absoluta para que estén fijos en la parte superior */
+  top: 2cm; /* Posiciona el formulario 2cm por debajo del borde superior */
+  margin-bottom: 1rem;
+}
+
+/* Estilos para el título */
+.titulo {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute; /* Posiciona de forma absoluta para que estén fijos en la parte superior */
+  top: 0cm; /* Posiciona el título en la parte superior */
+}
+
+/* Estilos para los campos de entrada y botones */
+input, button {
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 15px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Estilos específicos para el campo de entrada */
+input {
+  color: #00cf00;
+  background-color: #023f00;
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #023f00;
+  color: rgb(14, 239, 2);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+/* Barra de desplazamiento principal */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Manija (thumb) de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color de la manija (thumb) */
+}
+
+/* Estilos para los checkboxes */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00cf00; /* Color del borde del checkbox */
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Estilo cuando el checkbox está marcado */
+input[type="checkbox"]:checked {
+  background-color: rgb(8, 219, 12); /* Color de fondo cuando está marcado */
+  box-shadow: 0px 0px 20px rgba(81, 255, 0, 0.2);
+}
